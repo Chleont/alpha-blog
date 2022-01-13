@@ -4,7 +4,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Actions</th>
+      <th colspan = "3">Actions</th>
     </tr>
   </head>
   <tbody>
@@ -12,8 +12,14 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.description %></td>
-      <td><%= button_to 'Delete', article_path(article), method: :delete %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= button_to 'Delete', article_path(article), method: :delete, onclick: "return confirm('Are you sure ma friend?')", class: 'btn' %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+<p>
+  <%= link_to 'Create new article', new_article_path %>
+</p>
