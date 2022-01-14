@@ -1,7 +1,25 @@
-<h1>Showing something</h1>
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description%></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= button_to 'Delete', article_path(@article), method: :delete, onclick: "return confirm('Are you sure ma friend?')", class: 'btn' %> 
-<%= link_to 'Return to articles listing', articles_path %>
+<h2 class="text-center mt-4" ><%= @article.title %></h2>
+<div class="container" >
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="shadow mb-5 bg-white rounded">
+          <div class="card text-center">
+            <div class="card-header" id= "italic">
+              By me
+            </div>
+            <div class="card-body">
+              <div class="card-text text-start"><%= simple_format(@article.description) %></div>
+              <div class="btn-group" role="group">
+                <%= button_to "Edit", edit_article_path(@article), class:"btn btn-outline-info", style:"margin-left: 20px; margin-right: 20px", method: "get" %>
+                <%= button_to 'Delete', article_path(@article), class:"btn btn-outline-danger", method: :delete, onclick: "return confirm('Are you sure ma friend?')" %>
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              <small>Created <%= time_ago_in_words(@article.created_at) %> ago,
+              edited <%= time_ago_in_words(@article.updated_at) %> ago </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

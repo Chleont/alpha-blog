@@ -6,6 +6,12 @@
 .nav-link{
   color: black !important;
 }
+#italic{
+  font-style:italic;
+}
+#lg-btn{
+  margin-top: 10;
+}
 #logo{
   float: left;
   font-size: 1.7em;
@@ -36,9 +42,4 @@ body {
 #page-content {
   flex: 1 0 auto;
   background-color: lightgrey;
-}
-
-body {
-  background: #FFFFFF;
-  background: linear-gradient(to right, #FFFFFF, #FFFFFF);
 }
