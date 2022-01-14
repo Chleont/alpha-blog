@@ -1,10 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar{
-  background-color: #ABCDEF !important;
+  background-color: #5C8893 !important;
 }
 .nav-link{
-  color: #EE7722 !important;
+  color: black !important;
 }
 #logo{
   float: left;
