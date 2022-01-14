@@ -1,0 +1,44 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar{
+  background-color: #ABCDEF !important;
+}
+.nav-link{
+  color: #EE7722 !important;
+}
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: #DDDD44;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight:bold;
+}
+#home-container{
+  margin-top: 25px;
+}
+#jumbo-text{
+  padding-top: 25px;
+}
+.jumbotron{
+  background-image: url('mountain-background.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+  height: 60vh;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+body {
+  background: #FFFFFF;
+  background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+}
