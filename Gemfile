@@ -11,6 +11,7 @@ gem "sprockets-rails"
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'ffi'
 gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap5'
 #gem 'webpacker', "~> 4.0"

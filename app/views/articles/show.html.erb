@@ -5,8 +5,11 @@
         <div class="shadow mb-5 bg-white rounded">
           <div class="card text-center">
             <div class="card-header" id= "italic">
-                By <%= @article.user.username if @article.user %>
-                <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+              By <%= @article.user.username if @article.user %>
+              <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+              <% if @article.categories.any? %>
+                <div class="mt-2"><%= render @article.categories %></div>
+              <% end %>
             </div>
             <div class="card-body">
               <div class="card-text text-start"><%= simple_format(@article.description) %></div>

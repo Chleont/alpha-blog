@@ -90,6 +90,7 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    ffi (1.15.5-x64-mingw32)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
@@ -228,6 +229,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  ffi
   importmap-rails
   jbuilder
   jquery-rails
