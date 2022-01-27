@@ -1,29 +1,8 @@
 <h1 class="text-center mt-4" >Listing all articles</h1>
-<div class="container" >
-  <% @articles.each do |article| %>
-    <div class="row justify-content-md-center">
-      <div class="col-8 mt-4">
-        <div class="shadow mb-5 bg-white rounded">
-          <div class="card text-center">
-            <div class="card-header" id= "italic">
-              By <%= article.user.username if article.user %>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><%= link_to article.title, article_path(article), class:"text-success" %></h5>
-              <p class="card-text"><%= truncate(article.description, length: 100) %></p>
-              <div class="btn-group" role="group">
-                <%= button_to "Show", article_path(article), class:"btn btn-outline-success", method: "get" %>
-                <%= button_to "Edit", edit_article_path(article), class:"btn btn-outline-info", style:"margin-left: 20px; margin-right: 20px", method: "get" %>
-                <%= button_to 'Delete', article_path(article), class:"btn btn-outline-danger", method: :delete, onclick: "return confirm('Are you sure ma friend?')" %>
-              </div>
-            </div>
-            <div class="card-footer text-muted">
-            <small>Created <%= time_ago_in_words(article.created_at) %> ago,
-            edited <%= time_ago_in_words(article.updated_at) %> ago </small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
+<div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
+<%= render 'article' %>
+<div class="flickr_pagination mb-4">
+  <%= will_paginate @articles, :container => false %>
 </div>

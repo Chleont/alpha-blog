@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.9.4)
       msgpack (~> 1.0)
@@ -142,8 +143,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
-    rack-proxy (0.7.2)
-      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.1)
@@ -211,13 +210,12 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
-    webpacker (4.3.0)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.1)
+    will_paginate-bootstrap5 (0.2.4)
+      will_paginate (~> 3.0, >= 3.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.5.3)
@@ -226,6 +224,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
@@ -243,7 +242,8 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
-  webpacker (~> 4.0)
+  will_paginate (~> 3.3)
+  will_paginate-bootstrap5
 
 RUBY VERSION
    ruby 3.0.3p157

@@ -6,12 +6,15 @@
           <div class="card text-center">
             <div class="card-header" id= "italic">
                 By <%= @article.user.username if @article.user %>
+                <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
             </div>
             <div class="card-body">
               <div class="card-text text-start"><%= simple_format(@article.description) %></div>
               <div class="btn-group" role="group">
-                <%= button_to "Edit", edit_article_path(@article), class:"btn btn-outline-info", style:"margin-left: 20px; margin-right: 20px", method: "get" %>
-                <%= button_to 'Delete', article_path(@article), class:"btn btn-outline-danger", method: :delete, onclick: "return confirm('Are you sure ma friend?')" %>
+                <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
+                  <%= button_to "Edit", edit_article_path(@article), class:"btn btn-outline-info", style:"margin-left: 20px; margin-right: 20px", method: "get" %>
+                  <%= button_to 'Delete', article_path(@article), class:"btn btn-outline-danger", method: :delete, onclick: "return confirm('Are you sure ma friend?')" %>
+                <% end %>
               </div>
             </div>
             <div class="card-footer text-muted">

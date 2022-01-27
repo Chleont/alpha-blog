@@ -9,6 +9,10 @@ gem "rails", "~> 7.0.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'will_paginate', '~> 3.3'
+gem 'will_paginate-bootstrap5'
 #gem 'webpacker', "~> 4.0"
 
 # Use the Puma web server [https://github.com/puma/puma]
