@@ -6,7 +6,7 @@
         <div class="shadow mb-5 bg-white rounded">
           <div class="card text-center">
             <div class="card-header" id= "italic">
-              By me
+              By <%= article.user.username if article.user %>
             </div>
             <div class="card-body">
               <h5 class="card-title"><%= link_to article.title, article_path(article), class:"text-success" %></h5>

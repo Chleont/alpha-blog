@@ -5,7 +5,7 @@
         <div class="shadow mb-5 bg-white rounded">
           <div class="card text-center">
             <div class="card-header" id= "italic">
-              By me
+                By <%= @article.user.username if @article.user %>
             </div>
             <div class="card-body">
               <div class="card-text text-start"><%= simple_format(@article.description) %></div>
